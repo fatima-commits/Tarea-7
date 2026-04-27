@@ -1,11 +1,9 @@
 on: push
+
 jobs:
-  build-node:
+  test-container:
     runs-on: ubuntu-latest
-    container: node:16
+    container: php
     steps:
-      - run: echo "TESTING"
-      - run: node --version
-      - run: npm --version
-      - uses: actions/checkout@v3
-      - run: node app.js
+      - run: echo "Ejecutando acción dentro del contenedor"
+      - run: php -v
