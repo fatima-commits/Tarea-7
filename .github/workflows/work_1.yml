@@ -1,9 +1,8 @@
 on: push
-
 jobs:
   test-container:
     runs-on: ubuntu-latest
-    container: php
+    container: python:3.11-slim
     steps:
       - run: echo "Ejecutando acción dentro del contenedor"
-      - run: php -v
+      - run: python --version
